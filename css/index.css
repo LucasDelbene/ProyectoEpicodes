@@ -33,7 +33,7 @@
 	border: solid black 3px;
 	border-radius: 10px;
 	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-	background: #fff;
+	background-color: #fff;
 }
 
 /*COLUMNA IZQUIERDA y DERECHA INDEX*/
@@ -42,7 +42,7 @@
 }
 .columnaDerechaIndex{
 	background-image:url(../img/logoEpicodesSinFondo.png);
-	background-position: center center;
+	background-position: 60px;
 	background-size: 500px; 
 	background-repeat: no-repeat;
 }

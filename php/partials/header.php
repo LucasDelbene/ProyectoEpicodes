@@ -1,6 +1,6 @@
 <header class="header">
         <div class="logoTituloHeader">
-            <img src="../../img/logoEpicodes.ico" alt="" class="logoHeader">
+            <img src="../../img/logoEpicodesSinFondo.png" alt="" class="logoHeader">
             <h2 class='tituloHeader'><a href="./primeraSeccion.php">EPICODES</a></h2>
         </div>
 
