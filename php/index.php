@@ -13,40 +13,23 @@
     <title>EPICODES</title>
 </head>
 
-<body>
-	<header>
-		
-	</header>
+<body class="bodyIndex">
+	<div class="contenedorIndex">
+		<div class="columnaIzquierdaIndex">
+		    <h1 class="tituloIndex">BIENVENIDO A EPICODES</h1>
 
-	<div class="contenedor">
-		<div class="columna-izquierda">
-			<div class="registro activo" id="registro">
-				<div class="header">
-					<h1>INICIAR SESION EN EPICODES</h1>
-				</div>
-		
-				<form class="formulario" id="formulario">
-					<label for="usuario">USUARIO</label>
-					<div class="contenedor-input">
-						<input type="text" id="usuario" name="usuario">
-					</div>
-		
-					<label for="contraseña">CONTRASEÑA</label>
-					<div class="contenedor-input">
-						<span class="iconoContraseña"><i class="fa-solid fa-eye-slash"></i></span>
-						<input type="password" id="contraseña" name="contraseña"> 
-					</div>
-					
-					<div class="contenedor-boton">
-						<button type="submit">INICIAR SESION</button>
-					</div>
-				</form>
-			</div>
+		    <div class="botonesIndex">
+		    	<div class="botonIniciarSesion">
+		    		<button><a href="acceso.php">INICIAR SESION</button>
+		    	</div>
+    
+		    	<div class="botonRegistrarse">
+		    		<button><a href="registrarse.php">REGISTRARSE</a></button>
+		    	</div>
+		    </div>
 		</div>
 
-		<div class="columna-derecha"></div>
-
-		<script src="../js/index.js"></script>
+		<div class="columnaDerechaIndex"></div>
 	</div>
 </body>
 </html>

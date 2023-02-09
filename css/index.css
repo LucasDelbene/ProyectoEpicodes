@@ -2,130 +2,117 @@
 	--primario: #013E6A;
 	--secundario: #000;
 }
-* {
+
+*{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
-body {
-	background: #F0F4F3;
-	font-family: 'Quicksand', sans-serif;
-	background: linear-gradient(150deg,#350B38,#e1bbed,#350B38);
 
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
+/*BODY INDEX*/
+.bodyIndex{
 	justify-content: center;
+	align-items: center;
+	display: flex;
+	min-height: 100vh;
+
+	font-family: 'Quicksand', sans-serif;
+	background:#F0F4F3;
+	background: linear-gradient(150deg,#350B38,#e1bbed,#350B38);
 }
 
-/*CONTENEDOR*/
-.contenedor {
-	width: 90%;
-	max-width: 1400px;
-	border-radius: 10px;
-	overflow: hidden;
-	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-	background: #fff;
-	min-height: 60vh;
-	border: solid black 3px;
-	border-radius: 10px;
-
+/*CONTENEDOR INDEX*/
+.contenedorIndex{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	width: 90%;
+	max-width: 1400px;
+	min-height: 60vh;
+	overflow: hidden;
+
+	border: solid black 3px;
+	border-radius: 10px;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	background: #fff;
 }
-.columna-izquierda {
+
+/*COLUMNA IZQUIERDA y DERECHA INDEX*/
+.columnaIzquierdaIndex{
 	padding: 40px;
 }
-.columna-derecha {
+.columnaDerechaIndex{
 	background-image:url(../img/logoEpicodes.png);
 	background-position: center center;
 	background-size: 500px; 
 	background-repeat: no-repeat;
 }
 
-.header {
-	margin-bottom: 40px;
+/*TITULO INDEX*/
+.tituloIndex{
 	text-align: center;
-}
-.header h1 {
-	color: var(--secundario);
-	font-size: xx-large;
-}
-.header p{
-	color: var(--secundario);
-}
-label{
-	margin-bottom: 10px;
-	display: block;
-	font-weight: 500;
-	color: var(--secundario);
-	font-size: 15px;
-}
-.contenedor-input{
-	position: relative;
-}
-.registro{
-	display: none;
-}
-.registro.activo{
-	display: block;
+	margin-bottom: 115px;
 }
 
-
-input{
-	height: 50px;
-	line-height: 50px;
-	font-size: 16px;
-	width: 100%;
-	border: none;
-	border-radius: 5px;
-	padding: 0px 0px 0px 10px;
-	margin-bottom: 20px;
-	background: #f4f8f7;
-	color: var(--secundario);
-	font-family: 'Quicksand', sans-serif;
-	border: 2px solid;
+/*BOTONES INDEX*/
+.botonesIndex{
+	margin-left: 190px;
 }
-input:focus {
-	outline: none;
-	border: 2px solid var(--secundario);
-}
-.contenedor-boton {
-	display: flex;
-	justify-content: center;
-}
-button{
-	font-family: 'Quicksand', sans-serif;
-	font-size: 16px;
-	border-radius: 5px;
-	margin-top: 20px;
-	background: none;
-	height: 50px;
-	color: var(--primario);
-	padding: 0 50px;
+.botonIniciarSesion button{
 	display: flex;
 	align-items: center;
 	justify-content: end;
-	border: 2px solid var(--secundario);
-	cursor: pointer;
-	transition: 0.5s ease all;
-	outline: none;
-}
-button:hover {
-	background: var(--secundario);
-	color: #fff;
-}
+	font-size: 15px;
+	margin-top: 20px;
+	padding: 0 60px;
+	height: 55px;
 
-/*ICONO CONTRASEÑA*/
-.iconoContraseña{
-	position: absolute;
-	right: 15px;
-	top: 25px;
-	transform: translateY(-50%);
+	font-family: 'Quicksand', sans-serif;
+	background-color: black;
+	outline: none;
 	cursor: pointer;
 	transition: 0.4s ease all;
+	border: 2px solid var(--secundario);
+	border-radius: 5px;
+	color: var(--primario);
 }
-.iconoContraseña:hover{
-	color: gray;
+.botonIniciarSesion button a{
+	text-decoration: none;
+	color: white;
 }
- 
+.botonIniciarSesion button:hover{
+	background-color: #5A315F;
+	color: violet;
+}
+.botonIniciarSesion button a:hover{
+	color:white
+}
+
+.botonRegistrarse button{
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	font-size: 15px;
+	margin-top: 20px;
+	padding: 0 64px;
+	height: 55px;
+
+	font-family: 'Quicksand', sans-serif;
+	background-color: black;
+	outline: none;
+	cursor: pointer;
+	transition: 0.4s ease all;
+	border: 2px solid var(--secundario);
+	border-radius: 5px;
+	color: var(white);
+}
+.botonRegistrarse button a{
+	text-decoration: none;
+	color: white;
+}
+.botonRegistrarse button:hover{
+	background-color: #5A315F;
+	color: violet;
+}
+.botonRegistrarse button a:hover{
+	color:white
+}
