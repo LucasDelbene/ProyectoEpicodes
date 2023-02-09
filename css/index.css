@@ -27,6 +27,8 @@ body {
 	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 	background: #fff;
 	min-height: 60vh;
+	border: solid black 3px;
+	border-radius: 10px;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
