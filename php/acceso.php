@@ -31,7 +31,7 @@
 				</div>
 
 				<div class="botonAcceso">
-					<button type="submit"><a href="primeraSeccion.php">INICIAR SESION</a></button>
+					<button type="submit"><a href="./secciones/primeraSeccion.php">INICIAR SESION</a></button>
 				</div>
 			</form>
 		</div>
