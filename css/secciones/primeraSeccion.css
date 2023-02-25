@@ -119,3 +119,11 @@ body{
     font-size: xx-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.cuadrado{
+    border: 2px solid black;
+    width: 80%;
+    height: 30rem;
+    margin: auto;
+    margin-top: 2rem;
+}
