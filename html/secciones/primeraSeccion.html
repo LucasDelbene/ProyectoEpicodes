@@ -33,18 +33,54 @@
         </nav>
     </header>
     
-    <h1 class="tituloPrimeraSeccion">PRIMERA SECCION EPICODES</h1>
-
     <div>
         <h1 class="tituloPrimeraSeccion">PRIMERA SECCION EPICODES</h1>
-        <div class="cuadrado">
-            <button class="btnSubmitDatosSheet" style="margin: 100px;" type="button">ENVIAR</button>
+    
+        <div class="contenedorTabla">
+            <table class="tabla" id="tablaProductos">
+                <caption>TABLA DE DATOS</caption>
+                <thead>
+                        <tr>
+                            <th>CONSOLA</th>
+                            <th>PRECIO</th>
+                            <th>VENTAS</th>
+                            <th>FECHA DE LANZAMIENTO</th>
+                        </tr>
+                </thead>
+        
+                <tbody>
+                        <tr>
+                            <td dataLabel="Consola">PS5</td>
+                            <td dataLabel="Precio">$15000</td>
+                            <td dataLabel="Ventas">200</td>
+                            <td dataLabel="Fecha de Lanzamiento">25/02/2023</td>
+                        </tr>
+                        <tr>
+                            <td dataLabel="Consola">PS4</td>
+                            <td dataLabel="Precio">$10000</td>
+                            <td dataLabel="Ventas">100</td>
+                            <td dataLabel="Fecha de Lanzamiento">25/02/2023</td>
+                        </tr>
+                        <tr>
+                            <td dataLabel="Consola">PS3</td>
+                            <td dataLabel="Precio">$5000</td>
+                            <td dataLabel="Ventas">50</td>
+                            <td dataLabel="Fecha de Lanzamiento">25/02/2023</td>
+                        </tr>
+                </tbody>
+        
+                <div class="header exito" id="exito">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg> 
+                    
+                    <h1>ENVIADO CON EXITO</h1>
+                    <p>TE MANDAREMOS UN CORREO CON LOS RESPECTIVOS DETALLES</p>
+                </div>
+            </table>
         </div>
     </div>
-
-
-<script src="/js/conexion.js"></script>
-
 </body>
 </html>
 
