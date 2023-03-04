@@ -1,6 +1,8 @@
+// URL DE CONEXION A LA BASE DE DATOS EN GOOGLE SHEETS https://sheet.best/api/sheets/e1fa69e0-a796-4ef6-8120-3172f47c1ff2 //
+
 const formulario = document.getElementById('tablaPedidos');
 
-tablaProductos.addEventListener('submit', async(e) =>{
+tablaPedidos.addEventListener('submit', async(e) =>{
     e.preventDefault();
 
     //ESCRIBIR FILAS//
@@ -12,9 +14,10 @@ tablaProductos.addEventListener('submit', async(e) =>{
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                'Nombre': tablaProductos.nombre.value,
-                'Correo': tablaProductos.correo.value,
-                'Telefono': tablaProductos.telefono.value
+                'Consola': tablaPedidos.consola.value,
+                'Precio': tablaPedidos.precio.value,
+                'Ventas': tablaPedidos.ventas.value,
+                'Fecha': tablaPedidos.fecha.value
             })
         });
      
