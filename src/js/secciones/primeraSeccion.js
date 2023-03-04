@@ -1,5 +1,25 @@
-// URL DE CONEXION A LA BASE DE DATOS EN GOOGLE SHEETS https://sheet.best/api/sheets/e1fa69e0-a796-4ef6-8120-3172f47c1ff2 //
+//CODIGO QUE ESTOY PROBANDO//
+let conexionURL = 'https://sheet.best/api/sheets/0df03a9f-7630-47d5-a648-7f815358d854'
+fetch(conexionURL)
+    .then(response => response.json())
+    .then(data => mostrarPedidos(data))
+    .catch(error => console.log(error))
 
+const mostrarPedidos = (data)=>{
+    console.log(data)
+
+    let body = ''
+    for (let i=0; i<data.length; i++){
+        body += `<tr> <td>${data[i].Consola}</td> <td>${data[i].Precio}</td> <td>${data[i].Ventas}</td> <td>${data[i].Fecha}</td> </tr>`
+    }
+    document.getElementById('tbodyPedidos').innerHTML = body
+}   
+
+
+
+
+//CODIGO ANTERIOR//
+/*
 const formulario = document.getElementById('tablaPedidos');
 
 tablaPedidos.addEventListener('submit', async(e) =>{
@@ -72,6 +92,7 @@ function getData(){
   
     return dataPedidos;
 }
+*/
 
 
 
