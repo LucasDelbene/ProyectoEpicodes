@@ -1,6 +1,4 @@
-const formulario = document.getElementById('tablaProductos');
-const registro = document.getElementById('registro');
-const exito = document.getElementById('exito');
+const formulario = document.getElementById('tablaPedidos');
 
 tablaProductos.addEventListener('submit', async(e) =>{
     e.preventDefault();
@@ -68,8 +66,55 @@ tablaProductos.addEventListener('submit', async(e) =>{
     }catch{
         console.log(error);
     }
-    
-
-    registro.classList.remove('activo');
-    exito.classList.add('activo'); 
 })
+
+//FUNCION PARA RECARGAR PAGINA y QUE SE CARGUEN LOS DATOS//
+window.addEventListener("load", lookforData);
+
+function lookforData(){
+  google.script.run
+  .withSuccessHandler(pedidos=>{
+    let tablaBody = document.getElementById("tbodyPedidos");
+    var template = document.getElementById("rowTemplate");
+    var templateContenido = template.content;
+
+    pedidos.forEach(pedido=>{
+      const tr = templateContenido.cloneNode(true);
+
+      const columnaConsola = tr.querySelector(".templateConsola");
+      const columnaArticulo = tr.querySelector(".templatePrecio");
+      const columnaFecha = tr.querySelector(".templateVentas");
+      const columnaDescripcion = tr.querySelector(".templateFecha");
+
+      columnaConsola.textContent = pedido[0];
+      columnaArticulo.textContent = pedido[1];
+      columnaFecha.textContent = pedido[2];
+      columnaDescripcion.textContent = pedido[3];
+
+      tablaBody.appendChild(tr);
+    })
+  })
+  .getData();
+}
+
+//FUNCIONES doGet() y getData()//
+function doGet(){
+    const html = HtmlService.createTemplateFromFile("primeraSeccion") //NOMBRE DEL ARCHIVO HTML DONDE SE REALIZARA DICHA FUNCION
+    .evaluate();
+    return html;
+}
+  
+function getData(){
+    const SS = SpreadsheetApp.getActiveSpreadsheet();
+    const sheetPedidos = SS.getSheetByName("Pedidos");  //NOMBRE DE LA HOJA EN GOOGLE SHEETS
+    const dataPedidos = sheetPedidos.getDataRange().getDisplayValues();
+    dataPedidos.shift();
+  
+    return dataPedidos;
+}
+
+
+
+
+
+
